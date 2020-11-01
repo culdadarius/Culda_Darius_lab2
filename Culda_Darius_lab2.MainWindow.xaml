@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Culda_Darius_lab2"
-        xmlns:CustomCommands="clr-namespace:NumeStudent_PrenumeStudent_Lab2.CustomCommands"
         mc:Ignorable="d"
         Title="Virtual Doughnuts Factory" Height="648" Width="1118" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
     <Grid Margin="-158,-145,-163,-139">
@@ -25,7 +24,7 @@
         <Label x:Name="lblQuantity" Content="Quantity" HorizontalAlignment="Left" Margin="294,542,0,0" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="14"/>
         <TextBox x:Name="txtQuantity" HorizontalAlignment="Left" Margin="379,542,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Height="26" FontSize="14"/>
         <Label x:Name="lblType" Content="Type" HorizontalAlignment="Left" Margin="453,542,0,0" VerticalAlignment="Top" Width="78" FontWeight="Bold" FontSize="14"/>
-        <ComboBox x:Name="cmbType" HorizontalAlignment="Left" Margin="531,542,0,0" VerticalAlignment="Top" Width="156" Height="26" SelectionChanged="cmbType_SelectionChanged"/>
+        <ComboBox x:Name="cmbType" HorizontalAlignment="Left" Margin="531,542,0,0" VerticalAlignment="Top" Width="156" Height="26"/>
         <Label x:Name="lblPrice" Content="price" HorizontalAlignment="Left" Margin="733,542,0,0" VerticalAlignment="Top" Width="83" FontWeight="Bold" FontSize="14"/>
         <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Margin="802,542,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="29" IsReadOnly="True" FontSize="14"/>
         <ListBox x:Name="lstSale" Margin="310,593,470,225"/>
@@ -54,13 +53,8 @@ IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
                 </MenuItem>
                 
                 <MenuItem x:Name="mnuStop" Header="Stop"
-Click="stopToolStripMenuItem_Click"  InputGestureText="Ctrl+S" Command="CustomCommands:StopCommand.Launch"/>
-            
-                <MenuItem Header="Inventory" Command="ApplicationCommands.Print"></MenuItem>
+Click="stopToolStripMenuItem_Click"/>
             </MenuItem>
-            <Button x:Name="btnAdd" Click="btnAdd_Click"></Button>
-            <Button x:Name="btnRemoveItem" Click="btnRemoveItem_Click"></Button>
-            <Button x:Name="btnCheckOut" Click="btnCheckOut_Click"></Button>
         </Menu>
     </Grid>
 </Window>
